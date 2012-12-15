@@ -1,4 +1,4 @@
-site
+Site
 ====
 
-A personal website created with Flask
+My personal website
