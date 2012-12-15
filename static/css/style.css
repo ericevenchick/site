@@ -51,6 +51,13 @@ body h1,h2 {
     padding-bottom:40px;
 }
 
+.sidebar footer {
+    color: #888;
+    position: fixed;
+    bottom: 5px;
+    padding-left: 80px;
+    font-size: small;
+}
 .content {
     background-color: #fff;
     min-width: 400px;
@@ -77,3 +84,5 @@ body h1,h2 {
     padding:0;
 }
 
+.content h1 {
+    padding-bottom: 20px;
