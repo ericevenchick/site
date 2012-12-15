@@ -8,11 +8,10 @@ body h1,h2 {
 }
 
 .container {
-    width: 90%;
+    width: 95%;
     margin:auto;
 }
 .sidebar {
-    background-color: #fff;
     color: #000;
     text-align: right;
     min-height: 100%;
@@ -55,17 +54,6 @@ body h1,h2 {
     padding-bottom:40px;
 }
 
-.sidebar footer {
-    color: #888;
-    position: fixed;
-    bottom: 5px;
-    padding-left: 80px;
-    font-size: small;
-}
-
-.twitter {
-    padding-top: 50px;
-}
 .content {
     background-color: #fff;
     min-width: 400px;
@@ -88,11 +76,30 @@ body h1,h2 {
     color: #000;
 }
 
-.content ul {
-    padding:0;
+.content ul, ol {
+    padding-left:23px;
 }
 
-.content h1 {
-    padding-bottom: 20px;
+.content img {
+    display: block;
+    margin: auto;
 }
 
+.page-header {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.page-header h1,h2 {
+    display: inline;
+}
+
+.date {
+    float: right;
+    font-size: 20px;
+    color: #888;
+}
+
+.page {
+    padding-bottom: 70px;
+}

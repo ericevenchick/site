@@ -1,0 +1,9 @@
+<div class="page">
+  <div class="page-header">
+    <h1>{{ page.meta.title }}</h1>
+    {% if page.meta.has_key("date") %}
+    <span class="date">{{ page.meta.date.strftime("%b %e, %Y")}}</span>
+    {% endif %}
+  </div>
+  {{ page }}
+</div>

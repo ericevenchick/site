@@ -1,8 +1,5 @@
-{% extends "base.html" %}
-{% block content %}
-{% filter markdown %}
+title: Hi, I'm Eric
 
-# Hi, I'm Eric
 * Currently, I'm a Hardware Hacker at [Upverter](http://www.upverter.com) and
 the Electrical Team Lead for the
 [University of Waterloo Alternative Fuels Team](http://uwaft.com)
@@ -16,6 +13,4 @@ the Electrical Team Lead for the
   [GitHub](http://github.com/ericevenchick), and
   [LinkedIn](http://www.linkedin.com/pub/eric-evenchick/27/b5/796)
 
-{% endfilter %}
-{% endblock %}
 
