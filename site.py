@@ -5,6 +5,7 @@ from flask.ext.flatpages import FlatPages
 from flask_frozen import Freezer
 from argh import *
 import time
+from subprocess import call
 
 # Configuration
 BASE_URL = "http://evenchick.com"
@@ -13,6 +14,8 @@ FLATPAGES_AUTO_RELOAD = DEBUG   # prevent caching of pages
 FLATPAGES_EXTENSION = ".md"
 PAGE_DATE_FORMAT_STR = "%d-%m-%y"
 DISPLAY_DATE_FORMAT_STR = "%d-%m-%y"
+FREEZER_IGNORE_MIMETYPE_WARNINGS = True
+FREEZER_DEFAULT_MIMETYPE = "text/html"
 
 # Set up Flask
 app = Flask(__name__)
@@ -38,6 +41,8 @@ def page(path):
     return render_template("page.html", page=page)
 
 # URL Generators
+
+# Generate for Github, use .html extensions
 @freezer.register_generator
 def page_generator():
     for page in list(pages):
@@ -52,6 +57,19 @@ def serve(server="127.0.0.1", port=8080, debug=DEBUG):
     app.run(host=server, port=port, debug=debug)
 
 @command
+# this is hardcoded for now...
+def push():
+    """ Push static content to Amazon S3
+    """
+    call(["s3cmd",
+         "-P",                  # make files public
+         "--guess-mime-type",   # guess mime types for files with extensions
+         "sync",                # do a sync
+         "build/.",             # sync the build directory
+         "s3://evenchick.com"]  # sync to this target
+        )
+
+@command
 def build():
     """ Generate a static version of the site
     """
@@ -60,5 +78,5 @@ def build():
 
 if __name__ == "__main__":
     parser = ArghParser()
-    parser.add_commands([serve, build])
+    parser.add_commands([serve, build, push])
     parser.dispatch()
