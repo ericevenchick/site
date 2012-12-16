@@ -17,7 +17,7 @@ body h1,h2 {
     background-color: #fff;
     text-align: right;
     min-height: 100%;
-    min-width: 120px;
+    min-width: 100px;
     position: fixed;
     padding-top: 30px;
     padding-right: 28px;
@@ -63,19 +63,18 @@ body h1,h2 {
 
 .content {
     background-color: #fff;
-    min-width: 400px;
+    min-width: 350px;
     position: relative;
     padding-top: 128px;
     margin-left: 345px;
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 16px;
     line-height:28px;
 }
 .content a {
     text-decoration: none;
     border-bottom: 1px dashed;
     color: #888;
-    overflow-x:hidden;
 }
 
 .content a:hover {
@@ -102,6 +101,17 @@ body h1,h2 {
     display: inline;
 }
 
+.page-header a {
+    color: #000;
+    border: none;
+}
+
+.page-header a:hover {
+    color: #888;
+    border: none;
+}
+
+
 .date {
     float: right;
     font-size: 20px;
@@ -112,10 +122,7 @@ body h1,h2 {
     padding-bottom: 70px;
 }
 
-@media (max-width: 600px) {
-    body {
-            padding: none;
-    }
+@media (max-width: 700px) {
     body .container {
         margin-left: auto;
         margin-right: auto;
