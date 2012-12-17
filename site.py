@@ -27,11 +27,16 @@ markdown = Markdown(app)
 pages = FlatPages(app)
 freezer = Freezer(app)
 
+# Helper functions
+def get_pages_by_type(page_type):
+    page_list = list(pages)
+    matches = [p for p in page_list if p.meta.get('type') == page_type]
+    return matches
+
 # Flask Routing
 @app.route("/")
 def home():
-    page_list = list(pages)
-    post_list = [p for p in page_list if p.meta.get('type') == 'post']
+    post_list = get_pages_by_type('post')
     latest = sorted(post_list, reverse=True, key=lambda p: p.meta['date'])
     return render_template("index.html", posts=latest[:5])
 
@@ -40,9 +45,14 @@ def page(path):
     page = pages.get_or_404(path)
     return render_template("page.html", page=page)
 
+@app.route("/portfolio/")
+def portfolio():
+    portfolio_pages = get_pages_by_type('portfolio')
+    date_sorted = sorted(portfolio_pages, reverse=True, key=lambda p: p.meta['date'])
+    return render_template("portfolio.html", items=date_sorted)
+
 # URL Generators
 
-# Generate for Github, use .html extensions
 @freezer.register_generator
 def page_generator():
     for page in list(pages):
