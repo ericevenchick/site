@@ -12,5 +12,5 @@ the Electrical Team Lead for the
 * You can find me on [Twitter](http://twitter.com/ericevenchick),
   [GitHub](http://github.com/ericevenchick), and
   [LinkedIn](http://www.linkedin.com/pub/eric-evenchick/27/b5/796)
-
+* My resume is available [here](/static/EricEvenchickResume.pdf)
 

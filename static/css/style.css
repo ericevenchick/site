@@ -17,11 +17,10 @@ body h1,h2 {
     background-color: #fff;
     text-align: right;
     min-height: 100%;
-    min-width: 100px;
     position: fixed;
     padding-top: 30px;
     padding-right: 28px;
-    padding-left: 20px;
+    padding-left: 15px;
     border-right: 3px solid #ddd;
     z-index:1
 }
@@ -59,13 +58,11 @@ body h1,h2 {
 
 .content {
     background-color: #fff;
-    min-width: 350px;
-    position: relative;
     padding-top: 128px;
     margin-left: 345px;
     margin-right: 50px;
     font-size: 16px;
-    line-height:28px;
+    line-height: 28px;
 }
 .content a {
     text-decoration: none;
@@ -85,11 +82,12 @@ body h1,h2 {
 
 .content img {
     display: block;
+    max-width: 700px;
     margin: auto;
 }
 
 .page-header {
-    width: 100%;
+    max-width: 100%;
     padding-bottom: 15px;
 }
 
@@ -161,6 +159,11 @@ body h1,h2 {
 
     body .sidebar h1 {
         margin-bottom:10px;
+    }
+
+    .sidebar li {
+        display: inline;
+        padding-left: 18px;
     }
 
     body .content {
