@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask.ext.assets import Environment
 from flask.ext.markdown import Markdown
 from flask.ext.flatpages import FlatPages
+from flask.ext.flatpages import pygments_style_defs
 from flask_frozen import Freezer
 from argh import *
 import time
@@ -50,6 +51,10 @@ def portfolio():
     portfolio_pages = get_pages_by_type('portfolio')
     date_sorted = sorted(portfolio_pages, reverse=True, key=lambda p: p.meta['date'])
     return render_template("portfolio.html", items=date_sorted)
+
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
 # URL Generators
 
