@@ -163,7 +163,7 @@ body h1,h2 {
 
     .sidebar li {
         display: inline;
-        padding-left: 18px;
+        padding: 0 8px;
     }
 
     body .content {
