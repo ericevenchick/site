@@ -1,6 +1,5 @@
 env
 build
-/static/img
 
 *.py[cod]
 
