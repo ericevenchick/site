@@ -9,7 +9,7 @@ surrounding the game
 recently, and it reminded me of a game that taught me about programming:
 [MOO](http://en.wikipedia.org/wiki/MOO).
 
-<img src="/static/img/moologin.png" width=450>
+<img src="/static/img/moologin.png" width=450 style='width:100%'>
 
 MOO stands for **M**ulti-User Dungeon, **O**bject **O**riented. It's a
 server based text game that you connect to using a Telnet client.

@@ -1,6 +1,6 @@
 title: Ethanol Electric Hybrid Vehicle
 type: portfolio
-date: 2012-01-01
+date: 2013-01-01
 
 As the Electrical Team Lead for the [University of Waterloo Alternative Fuels
 Team](http://uwaft.com), I worked on developing the electrical systems for the

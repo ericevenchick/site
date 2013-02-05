@@ -81,7 +81,7 @@ def push():
          "--guess-mime-type",   # guess mime types for files with extensions
          "sync",                # do a sync
          "build/.",             # sync the build directory
-         "s3://evenchick.com"]  # sync to this target
+         "s3://www.evenchick.com"]  # sync to this target
         )
 
 @command
